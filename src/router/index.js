@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import VueResource from 'vue-resource'
-// import Hello from '@/components/Hello'
+import Common from '@/view/common'
 import Index from '@/view/index'
 
 Vue.use(Router)
@@ -11,10 +11,12 @@ export default new Router({
   routes: [
     {
       path: '/',
-      // name: 'Hello',
-      // component: Hello
-      name:'Index',
-      component: Index
+      name:'Common',
+      component: Common,
+      children:[
+      	{path:'index',name:'Index',component:Index},
+      	{path:'',redirect:'index'}
+      ]
     }
   ]
 })

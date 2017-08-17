@@ -19,7 +19,7 @@
 			</mt-swipe>
 		</div>		
 		<!-- 正在上映和即将上映部分 -->
-		<div class="subhead" ref="mysubhead">
+		<div class="subhead" :style="styletype">
 			<mt-navbar v-model="selected">
 			  	<mt-tab-item id="1">正在上映</mt-tab-item>
 			  	<mt-tab-item id="2">即将上映</mt-tab-item>
@@ -63,9 +63,9 @@
 			    					<i></i>
 			    				</h2>
 			    				<!-- <p class="score"></p> -->
-			    				<p>类型：<span v-for="(items,key) in item.genres">{{ items+' ' }}</span></p>
-	                            <p>导演：<span v-for="(items,key) in item.directors">{{ items.name+' ' }}</span></p>
-	                            <p>主演：<span v-for="(items,key) in item.casts">{{ items.name+' ' }}</span></p>
+			    				<p>类型：<span v-for="items in item.genres">{{ items+' ' }}</span></p>
+	                            <p>导演：<span v-for="items in item.directors">{{ items.name+' ' }}</span></p>
+	                            <p>主演：<span v-for="items in item.casts">{{ items.name+' ' }}</span></p>
 	                            <!-- <div class="hot"></div>
 	                            <div class="mounted"></div> -->
 			    			</div>
@@ -73,24 +73,7 @@
 			    	</div>
 		    	</ul>
 		  	</mt-tab-container-item>
-		</mt-tab-container>
-		<!-- 固定的尾部 -->
-		<mt-tabbar>
-		  <mt-tab-item id="电影">
-		  	<i class="fa fa-film"></i>
-		  	电影
-		  </mt-tab-item>
-		  <mt-tab-item id="影院">
-		  	<i class="fa fa-camera-retro"></i>
-		   	影院
-		  </mt-tab-item>
-		  <mt-tab-item id="我的">
-		  	<i class="fa fa-user"></i>
-		    我的
-		  </mt-tab-item>
-		</mt-tabbar>
-		
-		
+		</mt-tab-container>		
 	</div>
 </template>
 
@@ -107,6 +90,10 @@
 		            'https://gw.alicdn.com/tfs/TB1WPHfSpXXXXclaFXXXXXXXXXX-1280-520.jpg_720x720Q30.jpg',
 		            'https://gw.alicdn.com/tfs/TB1q7_4SpXXXXcNXpXXXXXXXXXX-1280-520.jpg_720x720Q30.jpg'
 		        ],
+		        styletype:{
+		        	position:'absolute',
+		        	top:'15rem'
+		        },
 		        // 正在上映的数据
 		    	showingDates:null,
 		    	// 即将上映的数据
@@ -145,24 +132,31 @@
 			  //   }
 			  //   this.loading = false;
 			  // }, 2500);
+			},
+			// 向上滑动时，固定住副导航条
+			gofixed(){
+				let that = this
+				// console.log(that.styletype.position)
+				// console.log(that.styletype.top)
+			    // console.log(document.body.scrollTop) 打印出滚动的距离
+				if (document.body.scrollTop > 168) {
+		        	that.styletype.position = 'fixed';
+		        	that.styletype.top = '5.65rem';
+		        }
+		        else {
+			        that.styletype.position = 'absolute';
+		        	that.styletype.top = '15rem';
+			    }
 			}
 		},
 		mounted(){
 			//传递数据到页面
 			this.getLists();
+			//回到顶部按钮不显示
+			this.visible = false;
 			// 向上滑动时，固定住副导航条
 			window.addEventListener('scroll', () => {
-				let that = this
-				//打印出滚动的距离
-			    // console.log(document.body.scrollTop)
-			    if (document.body.scrollTop > 168) {
-		        	that.$refs.mysubhead.style.position = 'fixed'
-		        	that.$refs.mysubhead.style.top = '5.65rem'
-		        }
-		        else {
-			        that.$refs.mysubhead.style.position = 'absolute'
-			        that.$refs.mysubhead.style.top = '15rem'
-			    }
+				this.gofixed();
 			})
 		}
 	}
@@ -175,8 +169,8 @@
 		position: relative;
 	}
 	.first .mint-header {
-		font-size: 1rem;
-		background-color: #ff0000;
+		font-size: 1.2rem;
+		background-color: #FE4C40;
 	}
 	.first .mint-search {
 	    position: fixed;
@@ -188,7 +182,7 @@
 	    margin-top: 40px;
 	}
 	.first .mint-searchbar {
-		background-color: #ff0000;
+		background-color: #FE4C40;
 	}
 	.first .mint-searchbar-inner {
 		height: 20px;
@@ -201,7 +195,7 @@
 	    color: white;
 	}
 	.first .mint-tab-item-label {
-	    font-size: 1rem;
+	    font-size: 0.9rem;
 	}
 	.first .banner{
 		margin-top:90px;
@@ -218,12 +212,11 @@
         background-repeat: no-repeat;
     }
     .first .mint-navbar .mint-tab-item.is-selected {
-        color: #ff0000;
-        border-bottom: 3px solid #ff0000;
+        color: #FE4C40;
+        border-bottom: 3px solid #FE4C40;
     }
     /*正在上映和即将上映*/
     .first .subhead{
-    	position: absolute;
     	width: 100%;
     	z-index: 1;
     	left: 0;
@@ -237,6 +230,9 @@
     }
     .first ul .boderline{
 		border-bottom: 1px #DCDCDC solid;
+    }
+    .first ul:last-child{
+		border-bottom: none;     /*最后一个元素没有底部边界*/
     }
     .first li{
     	height: 10rem;
@@ -269,11 +265,6 @@
         color: #8a869e;
         font-size:0.4375rem;
         padding-top: 0.2rem;
-    }
-    /*脚部*/
-    .first .mint-tabbar{
-    	position: fixed;
-    	color: #ff0000;
     }
 
 </style>
