@@ -3,7 +3,7 @@
 	<div class="first">
 		<!-- 固定的头部 -->
 		<div>
-			<mt-header fixed title="Go影院">
+			<mt-header fixed title="Go电影">
 			</mt-header>
 			<mt-search
 				v-model="value"
