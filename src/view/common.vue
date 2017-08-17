@@ -82,7 +82,7 @@
     /*回到顶部*/
 	.public .back-to-top{
 		position: fixed;
-		bottom: 6rem;
+		bottom: 16rem;
 		right: 0.1rem;
 		background: yellow;
 		z-index: 2;

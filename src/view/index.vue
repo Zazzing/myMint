@@ -43,8 +43,7 @@
 			    				<p>类型：<span v-for="(items,key) in item.genres">{{ items+' ' }}</span></p>
 	                            <p>导演：<span v-for="(items,key) in item.directors">{{ items.name+' ' }}</span></p>
 	                            <p>主演：<span v-for="(items,key) in item.casts">{{ items.name+' ' }}</span></p>
-	                            <!-- <div class="hot"></div>
-	                            <div class="mounted"></div> -->
+	                            <div class="hot"></div>	      
 			    			</div>
 			    		</li>
 			    	</div>
@@ -59,8 +58,6 @@
 			    			<div class="content">
 			    				<h2>
 			    					{{ item.title }}
-			    					<i></i>
-			    					<i></i>
 			    				</h2>
 			    				<!-- <p class="score"></p> -->
 			    				<p>类型：<span v-for="items in item.genres">{{ items+' ' }}</span></p>
@@ -98,7 +95,7 @@
 		    	showingDates:null,
 		    	// 即将上映的数据
 		    	comingDates:null,
-		    	loading:false
+		    	loading:false,
 		    }
 		},
 		methods:{
@@ -125,13 +122,6 @@
 	      	},
 			loadMore() {
 			  this.loading = true;
-			  // setTimeout(() => {
-			  //   let last = this.list[this.list.length - 1];
-			  //   for (let i = 1; i <= 10; i++) {
-			  //     this.list.push(last + i);
-			  //   }
-			  //   this.loading = false;
-			  // }, 2500);
 			},
 			// 向上滑动时，固定住副导航条
 			gofixed(){
@@ -240,6 +230,17 @@
     	/*padding-bottom: 2rem;
     	padding-left: 1rem;*/
     	padding: 0 0 2rem 1rem
+    }
+    .first .hot{
+        position: absolute;
+        top: 3rem;
+        right: 3rem;
+        width:2rem;
+        height: 3rem;
+        background-image:url('../assets/movie-new.png');
+        background-repeat:no-repeat;
+        background-size:100% 100%;
+        background-position:center center;
     }
     .first .poster{
     	width: 7rem;
