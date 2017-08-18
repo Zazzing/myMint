@@ -5,6 +5,7 @@ import Common from '@/view/common'
 import Index from '@/view/index'
 import Film from '@/view/film'
 import User from '@/view/user'
+import Detail from '@/view/detail'
 
 Vue.use(Router)
 Vue.use(VueResource)
@@ -19,7 +20,8 @@ export default new Router({
       	{path:'',redirect:'index'},
       	{path:'index',name:'Index',component:Index},
       	{path:'film',name:'Film',component:Film},
-      	{path:'user',name:'User',component:User}
+      	{path:'user',name:'User',component:User},
+        {path:'detail',name:'Detail',component:Detail}
       ]
     }
   ]

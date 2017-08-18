@@ -30,23 +30,26 @@
 			<!-- 正在上映内容 -->
 			<mt-tab-container-item id="1">
 		    	<ul v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-distance="10">
-		    		<div class="boderline" v-for="item in showingDates">
-			    		<li>
-			    			<div class="poster" :style="{backgroundImage:'url('+item.images.large+')'}"></div>
-			    			<div class="content">
-			    				<h2>
-			    					{{ item.title }}
-			    					<i></i>
-			    					<i></i>
-			    				</h2>
-			    				<!-- <p class="score"></p> -->
-			    				<p>类型：<span v-for="(items,key) in item.genres">{{ items+' ' }}</span></p>
-	                            <p>导演：<span v-for="(items,key) in item.directors">{{ items.name+' ' }}</span></p>
-	                            <p>主演：<span v-for="(items,key) in item.casts">{{ items.name+' ' }}</span></p>
-	                            <div class="hot"></div>	      
-			    			</div>
-			    		</li>
-			    	</div>
+			    		<div class="boderline" v-for="item in showingDates">
+			    			<router-link :to="{ name:'Detail', params: {movieID: item.id} }">
+					    		<li>
+					    			<div class="poster" :style="{backgroundImage:'url('+item.images.large+')'}"></div>
+					    			<div class="content">
+					    				<h2>
+					    					{{ item.title }}
+					    					<i></i>
+					    					<i></i>
+					    				</h2>
+					    				<!-- <p class="score"></p> -->
+					    				<p>类型：<span v-for="(items,key) in item.genres">{{ items+' ' }}</span></p>
+			                            <p>导演：<span v-for="(items,key) in item.directors">{{ items.name+' ' }}</span></p>
+			                            <p>主演：<span v-for="(items,key) in item.casts">{{ items.name+' ' }}</span></p>
+			                            <div class="hot"></div>	      
+					    			</div>
+					    		</li>
+				    		</router-link>
+				    	</div>
+			    	
 		    	</ul>
 		  	</mt-tab-container-item>
 		  	<!-- 即将上映内容 -->
@@ -96,17 +99,18 @@
 		    	// 即将上映的数据
 		    	comingDates:null,
 		    	loading:false,
+		    	num:null
 		    }
 		},
 		methods:{
 			getLists(){
 	    		let that = this
 	    		//正在上映
-		      	this.$http.get(api.in_showing).then(response  => {
+		      	this.$http.get(api.in_showing, {timeout:8000 }).then(response  => {
 		      		console.log("请求成功了");
 		      		// console.log(response.data.subjects);
 		      		that.showingDates = response.data.subjects;
-		      		console.log(that.showingDates);
+		      		// console.log(that.showingDates);
 		      	}, response => {
 		      		console.log("请求失败了");
 	      		})
@@ -114,8 +118,8 @@
 	      		this.$http.get(api.in_coming).then(response  => {
 		      		console.log("请求成功了");
 		      		// console.log(response.data.subjects);
-		      		that.comingDates = response.data.subjects;
-		      		console.log(that.comingDates);
+		      		// that.comingDates = response.data.subjects;
+		      		// console.log(that.comingDates);
 		      	}, response => {
 		      		console.log("请求失败了");
 	      		})

@@ -11,7 +11,6 @@
 
 <script>
 	import Vue from 'vue'
-	import {api} from '../global/api';
 	export default {
 		data () {
 		    return {
@@ -19,19 +18,10 @@
 		    }
 		},
 		methods:{
-			getLists(){
-	    		let that = this
-		      	this.$http.get(api.in_coming).then(response  => {
-		      		console.log("请求成功了");
-		      		// console.log(response.data);
-		      	}, response => {
-		      		console.log("请求失败了");
-	      		})
-	      	}
+			
 		},
 		mounted(){
-			//传递数据到页面
-			this.getLists();
+			
 		}
 	}
 </script>
