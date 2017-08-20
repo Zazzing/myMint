@@ -1,6 +1,6 @@
 <template>
 	<div class="detail">
-		<mt-header title="详情页">
+		<mt-header title="详情页" fixed>
 		  <router-link to="/" slot="left">
 		    <mt-button icon="back"></mt-button>
 		  </router-link>
@@ -53,46 +53,107 @@
 					<a href="">
 						<img src="https://p0.meituan.net/movie/784df6b879229cab0617d0ed2bc2225654406.jpg@130w_180h.webp">
 					</a>
-					<span>叶伟信</span>
-					<span>导演</span>
+					<span class="actorName">叶伟信</span>
+					<span class="actorType">导演</span>
 				</li>
 				<li>
 					<a href="">
 						<img src="https://p0.meituan.net/movie/784df6b879229cab0617d0ed2bc2225654406.jpg@130w_180h.webp">
 					</a>
-					<span>叶伟信</span>
-					<span>导演</span>
+					<span class="actorName">叶伟信</span>
+					<span class="actorType">导演</span>
 				</li>
 				<li>
 					<a href="">
 						<img src="https://p0.meituan.net/movie/784df6b879229cab0617d0ed2bc2225654406.jpg@130w_180h.webp">
 					</a>
-					<span>叶伟信</span>
-					<span>导演</span>
+					<span class="actorName">叶伟信</span>
+					<span class="actorType">导演</span>
 				</li>
 				<li>
 					<a href="">
 						<img src="https://p0.meituan.net/movie/784df6b879229cab0617d0ed2bc2225654406.jpg@130w_180h.webp">
 					</a>
-					<span>叶伟信</span>
-					<span>导演</span>
+					<span class="actorName">叶伟信</span>
+					<span class="actorType">导演</span>
 				</li>
 				<li>
 					<a href="">
 						<img src="https://p0.meituan.net/movie/784df6b879229cab0617d0ed2bc2225654406.jpg@130w_180h.webp">
 					</a>
-					<span>叶伟信</span>
-					<span>导演</span>
+					<span class="actorName">叶伟信</span>
+					<span class="actorType">导演</span>
 				</li>
 				<li>
 					<a href="">
 						<img src="https://p0.meituan.net/movie/784df6b879229cab0617d0ed2bc2225654406.jpg@130w_180h.webp">
 					</a>
-					<span>叶伟信</span>
-					<span>导演</span>
+					<span class="actorName">叶伟信</span>
+					<span class="actorType">导演</span>
 				</li>
 			</ul>
 		</div>
+
+		<!-- 热门评论 -->
+        <div class="movieComments">
+        	<h2>热门评论</h2>
+        	<ul class="comments-list">
+        		<li>
+        			<div class="comment">
+        				<div class="commentRate">
+        					<img src="https://ms0.meituan.net/canary/img/star-full-new.png">
+        					<span>3天前</span>
+        				</div>
+        				<div class="commentCon">
+        					<p>那个编剧 我儿豁嘛 脑壳有毛病 给别个屋头写死完了 女儿死了蛮古天乐就孤家寡人一个嘛 他鼓捣还要把古天乐写死我不晓得他有好仇恨这个世界 活着不好吗 硬是看到恼火诶 老婆出车祸死了 女子死了 留个古天乐蛮也好纪念(祭奠)哈别个屋头人嘛 硬是鼓捣给别个写死完 他妈卖批恼火蛮一天</p>
+        				</div>
+        				<div class="commentFooter">
+        					<img src="https://img.meituan.net/avatar/24a317c91142a28ab9d84de50941dd8419771.jpg">
+        					<span class="nick">omggggggg丶</span>
+        					<span class="tags">购</span>
+        				
+        					<div class="pull-right">
+        						<a href="">
+        							<i class="fa fa-thumbs-o-up"></i>
+        							<span>1456</span>
+        						</a>
+	        					<a href="">
+	        						<i class="fa fa-commenting-o"></i>
+	        						<span>105</span>
+	        					</a>
+	        				</div>
+        				</div>
+        			</div>
+        		</li>
+        		<li>
+        			<div class="comment">
+        				<div class="commentRate">
+        					<img src="https://ms0.meituan.net/canary/img/star-full-new.png">
+        					<span>3天前</span>
+        				</div>
+        				<div class="commentCon">
+        					<p>那个编剧 我儿豁嘛 脑壳有毛病 给别个屋头写死完了 女儿死了蛮古天乐就孤家寡人一个嘛 他鼓捣还要把古天乐写死我不晓得他有好仇恨这个世界 活着不好吗 硬是看到恼火诶 老婆出车祸死了 女子死了 留个古天乐蛮也好纪念(祭奠)哈别个屋头人嘛 硬是鼓捣给别个写死完 他妈卖批恼火蛮一天</p>
+        				</div>
+        				<div class="commentFooter">
+        					<img src="https://img.meituan.net/avatar/24a317c91142a28ab9d84de50941dd8419771.jpg">
+        					<span class="nick">omggggggg丶</span>
+        					<span class="tags">购</span>
+        				
+        					<div class="pull-right">
+        						<a href="">
+        							<i class="fa fa-thumbs-o-up"></i>
+        							<span>1456</span>
+        						</a>
+	        					<a href="">
+	        						<i class="fa fa-commenting-o"></i>
+	        						<span>105</span>
+	        					</a>
+	        				</div>
+        				</div>
+        			</div>
+        		</li>
+        	</ul>
+        </div>
 	</div>
 </template>
 
@@ -136,9 +197,12 @@
 <style>
 	.detail{
 		line-height: 1;
+		margin-bottom: 3rem;
+		background: #f4f4f4;
 	}
-	.detail p{
+	.detail p,h2{
 		margin: 0;
+		padding: 0;
 	}
 	.detail ul{
 		list-style-type: none;
@@ -152,13 +216,14 @@
 	}
 	/*电影详情*/
 	.detail .movieDetails{
-		background: #f4f4f4;
 		position: relative;
+		margin-top: 2rem;	
 	}
 	.detail .movie-container{
 		overflow: hidden;
 		color: #fff;
-		background-color: green;
+		background-color: #40454d;
+    	opacity: 0.9;
 		padding:1rem;
 	}
 	.detail .moviePoster{
@@ -183,7 +248,7 @@
     	margin-bottom: 0.6rem;
 	}
 	.detail .movieTitle{
-		font-size: 1.34rem;
+		font-size: 1.2rem;
 	}
 	.movieRate img{
 		width: 1rem;
@@ -192,8 +257,10 @@
 	}
 	/*电影简介*/
 	.detail .movie-review{
-		background-color: yellow;
+		background-color: white;
 		padding:1rem;
+		border-bottom: 1px solid #e5e5e5;
+		margin-bottom: 1rem;
 	}
 	.detail .movie-review a{
 		display: block;
@@ -209,15 +276,16 @@
 	}
 	/*演员列表*/
 	.movieArtists{
-		background: red;
+		background: white;
     	white-space: nowrap;
-    	/*overflow: hidden;*/
-    	margin-bottom: 12rem;
+    	margin-bottom: 1rem;  
+    	border: 1px solid #e5e5e5;  	
 	}
 	.movieArtists ul{
-		padding: 1rem 0rem 0.2rem 1rem;
-		width: 100%;
+		padding: 1rem 0.2rem 0.2rem 1rem;
 		overflow-x: scroll;
+		width: 100%;
+		box-sizing: border-box;
 	}
 	.movieArtists li:first-child {
     	padding-left: 0;
@@ -228,10 +296,96 @@
 	    display: inline-block;
 	}
 	.movieArtists li img{
-	    width: 5rem;
+	    width: 4.12rem;
 	}
 	.movieArtists li span{
 	    display: block;
+	}
+	.movieArtists .actorName{
+		margin-top: 0.2rem;
+		font-size: 1rem;
+	}
+	.movieArtists .actorType {
+    	font-size: 0.6rem;
+    	margin: 0.2rem 0 0.2rem 0;
+    	color: #999;
+	}
+	/*热门评论*/
+	.movieComments{
+		background: white;
+		border: 1px solid #e5e5e5;
+	}
+	.movieComments h2{
+		color: #666;
+	    font-size: 1rem;
+	    padding: 1rem 1rem;
+	    border-bottom: 1px solid #e5e5e5;
+	}
+	.movieComments ul{
+		margin: 0 1rem;
+	}
+	.movieComments ul li{
+		padding: 0.5rem 0rem;
+		border-bottom: 1px solid #e5e5e5 ;
+	}
+	.commentRate{
+		font-size: 1rem;
+	}
+	.commentRate img{
+		width: 1rem;
+   		height: 1rem;
+   		margin-right: 0.2rem;
+	}
+	.commentRate span{
+		color: #999;
+	}
+	.commentCon{
+	    margin-top: 0.2rem;
+	    margin-bottom: 0.2rem;
+	}
+	.commentCon p{
+	    font-size: 1rem;
+	    line-height: 1.5;
+	    text-align: justify;
+	    word-wrap: break-word;
+	}
+	.commentFooter{
+		margin-top: 0.5rem;
+	    margin-bottom: 0.2rem;
+	    line-height: 1rem;
+	}
+	.commentFooter img{
+		float: left;
+	    width: 1.58rem;
+	    border-radius: 50%;
+	    display: inline-block;
+	    margin-right: 0.4rem;
+	}
+	.commentFooter span{
+		display: inline-block;
+	    color: #999;
+	    font-size: 0.8rem;
+	    text-overflow: ellipsis;
+	    overflow: hidden;
+	    white-space: nowrap;
+	}
+	.tags{
+		color: white !important;
+	    font-size: 0.7rem;
+	    border-radius: 2px;
+	    background: #ff9900;
+	    padding: 1px 2px;
+	}
+	.pull-right{
+		float:right;
+	}
+	.pull-right a{
+		color: #999;
+	    margin-right: 0.1rem;
+	    display: inline-block;
+	}
+	.pull-right a i,.pull-right a span{
+		vertical-align: middle;
 	}
 
 
