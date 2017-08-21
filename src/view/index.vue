@@ -92,7 +92,7 @@
 		        ],
 		        styletype:{
 		        	position:'absolute',
-		        	top:'15rem'
+		        	top:'18rem'
 		        },
 		        // 正在上映的数据
 		    	showingDates:null,
@@ -107,7 +107,7 @@
 	    		let that = this
 	    		//正在上映
 		      	this.$http.get(api.in_showing, {timeout:8000 }).then(response  => {
-		      		console.log("请求成功了");
+		      		console.log("请求成功了1");
 		      		// console.log(response.data.subjects);
 		      		that.showingDates = response.data.subjects;
 		      		// console.log(that.showingDates);
@@ -115,10 +115,10 @@
 		      		console.log("请求失败了");
 	      		})
 	      		//即将上映
-	      		this.$http.get(api.in_coming).then(response  => {
-		      		console.log("请求成功了");
+	      		this.$http.get(api.in_coming, {timeout:8000 }).then(response  => {
+		      		console.log("请求成功了2");
 		      		// console.log(response.data.subjects);
-		      		// that.comingDates = response.data.subjects;
+		      		that.comingDates = response.data.subjects;
 		      		// console.log(that.comingDates);
 		      	}, response => {
 		      		console.log("请求失败了");
@@ -130,16 +130,16 @@
 			// 向上滑动时，固定住副导航条
 			gofixed(){
 				let that = this
-				// console.log(that.styletype.position)
-				// console.log(that.styletype.top)
+				console.log(that.styletype.position)
+				console.log(that.styletype.top)
 			    // console.log(document.body.scrollTop) 打印出滚动的距离
 				if (document.body.scrollTop > 168) {
 		        	that.styletype.position = 'fixed';
-		        	that.styletype.top = '5.65rem';
+		        	that.styletype.top = '7rem';
 		        }
 		        else {
 			        that.styletype.position = 'absolute';
-		        	that.styletype.top = '15rem';
+		        	that.styletype.top = '18rem';
 			    }
 			}
 		},
@@ -192,16 +192,16 @@
 	    font-size: 0.9rem;
 	}
 	.first .banner{
-		margin-top:90px;
+		margin-top:7.5rem;
 		padding-top: 0;
-		height: 10rem;  /*与下面的top有关联*/
+		height: 12rem;  /*与下面的top有关联*/
 		overflow: hidden;
 	}
 	.first .mint-swipe-item{
         width: 100%;
         height: 100%;
-        /*background-size: 100% 100%;*/
-        background-size: cover;
+        background-size: 100% 100%;
+        /*background-size: cover;*/
         background-position: center center;
         background-repeat: no-repeat;
     }
@@ -214,13 +214,13 @@
     	width: 100%;
     	z-index: 1;
     	left: 0;
-    	top: 15rem; /*与下面的margin-top有关联*/
+    	/*top: 30rem; 与下面的margin-top有关联*/
     }
     /*正在上映*/
     .first ul{
     	list-style-type: none;
     	padding-left: 0;
-    	margin-top: 4rem;
+    	margin-top: 5rem;
     }
     .first ul .boderline{
 		border-bottom: 1px #DCDCDC solid;
@@ -231,8 +231,6 @@
     .first li{
     	height: 10rem;
     	margin-top: 2rem;
-    	/*padding-bottom: 2rem;
-    	padding-left: 1rem;*/
     	padding: 0 0 2rem 1rem
     }
     .first .hot{

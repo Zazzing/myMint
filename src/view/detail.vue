@@ -168,28 +168,27 @@
 		    }
 		},
 		methods:{
-
-			// getId(){
-			// 	this.id = this.$route.params.movieID
-			// 	console.log(this.id)
-			// },
-			// getLists(){
-	  //   		let that = this
-	  //   		//正在上映
-		 //      	this.$http.get('/v2/movie/subject/26363254').then(response  => {
-		 //      		console.log("请求成功了");
-		 //      		// console.log(response.data);
-		 //      		that.movieDatas = response.data
-		 //      		console.log(that.movieDatas);
-		 //      	}, response => {
-		 //      		console.log("请求失败了");
-	  //     		})
-	  //     	}
+			getId(){
+				this.id = this.$route.params.movieID
+				console.log(this.id)
+			},
+			getLists(){
+	    		let that = this
+	    		//正在上映
+		      	this.$http.get('/v2/movie/subject/26363254').then(response  => {
+		      		console.log("请求成功了3");
+		      		// console.log(response.data);
+		      		that.movieDatas = response.data
+		      		console.log(that.movieDatas);
+		      	}, response => {
+		      		console.log("请求失败了");
+	      		})
+	      	}
 
 		},
 		mounted(){
-			// this.getId()
-			// this.getLists()
+			this.getId()
+			this.getLists()
 		}
 	}
 </script>
@@ -197,7 +196,7 @@
 <style>
 	.detail{
 		line-height: 1;
-		margin-bottom: 3rem;
+		margin-bottom: 3.3rem;
 		background: #f4f4f4;
 	}
 	.detail p,h2{
@@ -217,7 +216,7 @@
 	/*电影详情*/
 	.detail .movieDetails{
 		position: relative;
-		margin-top: 2rem;	
+		margin-top: 3rem;	
 	}
 	.detail .movie-container{
 		overflow: hidden;
@@ -241,14 +240,14 @@
 	    text-overflow: ellipsis;
 	    white-space: nowrap;
 	    overflow: hidden;
-	    font-size: 0.9rem;
+	    font-size: 0.7rem;
 	}
 	.detail .movieContent p{
 		margin-top: 0.6rem;
     	margin-bottom: 0.6rem;
 	}
 	.detail .movieTitle{
-		font-size: 1.2rem;
+		font-size: 1rem;
 	}
 	.movieRate img{
 		width: 1rem;
@@ -264,7 +263,7 @@
 	}
 	.detail .movie-review a{
 		display: block;
-		background: #e54847;
+		background: #FE4C40;
 		padding: 0.7rem;
 		text-align: center;
 		color: white;
@@ -272,19 +271,19 @@
 		margin-bottom: 0.5rem;
 	}
 	.movie-notes{
-		line-height: 1.4rem;
+		line-height: 1.5rem;
+		font-size: 0.9rem;
 	}
 	/*演员列表*/
 	.movieArtists{
 		background: white;
     	white-space: nowrap;
     	margin-bottom: 1rem;  
-    	border: 1px solid #e5e5e5;  	
+    	border: 1px solid #e5e5e5;  
 	}
 	.movieArtists ul{
 		padding: 1rem 0.2rem 0.2rem 1rem;
 		overflow-x: scroll;
-		width: 100%;
 		box-sizing: border-box;
 	}
 	.movieArtists li:first-child {
@@ -296,7 +295,7 @@
 	    display: inline-block;
 	}
 	.movieArtists li img{
-	    width: 4.12rem;
+	    width: 7.2rem;
 	}
 	.movieArtists li span{
 	    display: block;
@@ -344,15 +343,15 @@
 	    margin-bottom: 0.2rem;
 	}
 	.commentCon p{
-	    font-size: 1rem;
-	    line-height: 1.5;
+	    font-size: 0.8rem;
+	    line-height: 1.7;
 	    text-align: justify;
 	    word-wrap: break-word;
 	}
 	.commentFooter{
 		margin-top: 0.5rem;
 	    margin-bottom: 0.2rem;
-	    line-height: 1rem;
+	    line-height: 1.3rem;
 	}
 	.commentFooter img{
 		float: left;
