@@ -92,7 +92,7 @@
 		        ],
 		        styletype:{
 		        	position:'absolute',
-		        	top:'18rem'
+		        	top:'220px'
 		        },
 		        // 正在上映的数据
 		    	showingDates:null,
@@ -130,16 +130,16 @@
 			// 向上滑动时，固定住副导航条
 			gofixed(){
 				let that = this
-				console.log(that.styletype.position)
-				console.log(that.styletype.top)
+				// console.log(that.styletype.position)
+				// console.log(that.styletype.top)
 			    // console.log(document.body.scrollTop) 打印出滚动的距离
 				if (document.body.scrollTop > 168) {
 		        	that.styletype.position = 'fixed';
-		        	that.styletype.top = '7rem';
+		        	that.styletype.top = '85px';
 		        }
 		        else {
 			        that.styletype.position = 'absolute';
-		        	that.styletype.top = '18rem';
+		        	that.styletype.top = '220px';
 			    }
 			}
 		},
@@ -173,7 +173,7 @@
 	    right: 0;
 	    top: 0;
 	    height: auto;
-	    margin-top: 40px;
+	    margin-top: 3rem;
 	}
 	.first .mint-searchbar {
 		background-color: #FE4C40;
@@ -192,7 +192,7 @@
 	    font-size: 0.9rem;
 	}
 	.first .banner{
-		margin-top:7.5rem;
+		margin-top:7rem;
 		padding-top: 0;
 		height: 12rem;  /*与下面的top有关联*/
 		overflow: hidden;
@@ -220,7 +220,8 @@
     .first ul{
     	list-style-type: none;
     	padding-left: 0;
-    	margin-top: 5rem;
+    	margin-top: 4rem;
+    	margin-bottom: 3rem;
     }
     .first ul .boderline{
 		border-bottom: 1px #DCDCDC solid;

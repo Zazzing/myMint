@@ -249,13 +249,13 @@
 	.detail .movieTitle{
 		font-size: 1rem;
 	}
-	.movieRate img{
+	.detail .movieRate img{
 		width: 1rem;
 		display: block;
 		margin-bottom: 0.2rem;
 	}
 	/*电影简介*/
-	.detail .movie-review{
+	.detail .detail .movie-review{
 		background-color: white;
 		padding:1rem;
 		border-bottom: 1px solid #e5e5e5;
@@ -270,97 +270,97 @@
 		border-radius: 4px;
 		margin-bottom: 0.5rem;
 	}
-	.movie-notes{
+	.detail .movie-notes{
 		line-height: 1.5rem;
 		font-size: 0.9rem;
 	}
 	/*演员列表*/
-	.movieArtists{
+	.detail .movieArtists{
 		background: white;
     	white-space: nowrap;
     	margin-bottom: 1rem;  
     	border: 1px solid #e5e5e5;  
 	}
-	.movieArtists ul{
+	.detail .movieArtists ul{
 		padding: 1rem 0.2rem 0.2rem 1rem;
 		overflow-x: scroll;
 		box-sizing: border-box;
 	}
-	.movieArtists li:first-child {
+	.detail .movieArtists li:first-child {
     	padding-left: 0;
 	}
-	.movieArtists li {
+	.detail .movieArtists li {
 	    padding: 0 0.03rem;
 	    text-align: center;
 	    display: inline-block;
 	}
-	.movieArtists li img{
+	.detail .movieArtists li img{
 	    width: 7.2rem;
 	}
-	.movieArtists li span{
+	.detail .movieArtists li span{
 	    display: block;
 	}
-	.movieArtists .actorName{
+	.detail .movieArtists .actorName{
 		margin-top: 0.2rem;
 		font-size: 1rem;
 	}
-	.movieArtists .actorType {
+	.detail .movieArtists .actorType {
     	font-size: 0.6rem;
     	margin: 0.2rem 0 0.2rem 0;
     	color: #999;
 	}
 	/*热门评论*/
-	.movieComments{
+	.detail .movieComments{
 		background: white;
 		border: 1px solid #e5e5e5;
 	}
-	.movieComments h2{
+	.detail .movieComments h2{
 		color: #666;
 	    font-size: 1rem;
 	    padding: 1rem 1rem;
 	    border-bottom: 1px solid #e5e5e5;
 	}
-	.movieComments ul{
+	.detail .movieComments ul{
 		margin: 0 1rem;
 	}
-	.movieComments ul li{
+	.detail .movieComments ul li{
 		padding: 0.5rem 0rem;
 		border-bottom: 1px solid #e5e5e5 ;
 	}
-	.commentRate{
+	.detail .commentRate{
 		font-size: 1rem;
 	}
-	.commentRate img{
+	.detail .commentRate img{
 		width: 1rem;
    		height: 1rem;
    		margin-right: 0.2rem;
 	}
-	.commentRate span{
+	.detail .commentRate span{
 		color: #999;
 	}
-	.commentCon{
+	.detail .commentCon{
 	    margin-top: 0.2rem;
 	    margin-bottom: 0.2rem;
 	}
-	.commentCon p{
+	.detail .commentCon p{
 	    font-size: 0.8rem;
 	    line-height: 1.7;
 	    text-align: justify;
 	    word-wrap: break-word;
 	}
-	.commentFooter{
+	.detail .commentFooter{
 		margin-top: 0.5rem;
 	    margin-bottom: 0.2rem;
 	    line-height: 1.3rem;
 	}
-	.commentFooter img{
+	.detail .commentFooter img{
 		float: left;
 	    width: 1.58rem;
 	    border-radius: 50%;
 	    display: inline-block;
 	    margin-right: 0.4rem;
 	}
-	.commentFooter span{
+	.detail .commentFooter span{
 		display: inline-block;
 	    color: #999;
 	    font-size: 0.8rem;
@@ -368,22 +368,22 @@
 	    overflow: hidden;
 	    white-space: nowrap;
 	}
-	.tags{
+	.detail .tags{
 		color: white !important;
 	    font-size: 0.7rem;
 	    border-radius: 2px;
 	    background: #ff9900;
 	    padding: 1px 2px;
 	}
-	.pull-right{
+	.detail .pull-right{
 		float:right;
 	}
-	.pull-right a{
+	.detail .pull-right a{
 		color: #999;
 	    margin-right: 0.1rem;
 	    display: inline-block;
 	}
-	.pull-right a i,.pull-right a span{
+	.detail .pull-right a i,.pull-right a span{
 		vertical-align: middle;
 	}
 
