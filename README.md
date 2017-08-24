@@ -1,14 +1,17 @@
-# mymint
+# 项目描述
 
-> A Vue.js project
+> 写这个项目的目的是为了学习vue2.0相关的知识点，加深对vue2.0的理解
 
-## Build Setup
+### 如何运行
 
 ``` bash
-# install dependencies
+# 下载项目
+git clone https://github.com/Zazzing/myMint.git
+
+# 安装依赖包
 npm install
 
-# serve with hot reload at localhost:8080
+# 启动项目
 npm run dev
 
 # build for production with minification
@@ -25,6 +28,11 @@ npm run e2e
 
 # run all tests
 npm test
+```
+
+``` bash
+# 项目描述
+
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
