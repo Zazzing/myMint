@@ -32,8 +32,7 @@ npm test
 
 
 ### 项目预览
-``` bash
+
 ![image](https://github.com/Zazzing/myMint/blob/master/src/assets/demo.gif)
-```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
